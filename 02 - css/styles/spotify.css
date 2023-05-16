@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+aside{
+    background-color: black;
+    width: 15%;
+    float: left;
+    /* 100vh es el 100% de la pantalla */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+main{
+    width: 85%;
+    background-color: #121212;
+    float: left;
+    /* display: inline-block; */
+    position: relative;
+    left: 15%;
+}
+
+#songs{
+    padding: 30px;
+}
+
+article{
+    background-color: #181818;
+    width: 12.5%;
+    padding: 3px;
+    float: left;
+    /* display: inline-block; */
+    margin: 0 5px;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
