@@ -8,6 +8,10 @@ console.log(mensaje)
 
 let tzuzul = ["Tzuzul Rosas", 24, true, "Negro", "Musica", 24]
 
+for(let i=0;i<tzuzul.length;i++){
+    console.log(tzuzul[i])
+}
+
 
 // JSON: JavaScriopt Object Notation
 
@@ -28,6 +32,7 @@ let tzuzulObjeto = {
     colorFavorito: "Negro",
     hobby: "Musica"
 }
+tzuzulObjeto["edad"]
 
 let tzuzulJSON = JSON.stringify(tzuzulObjeto)
 let tzuzulObjetoParseado = JSON.parse(tzuzulJSON)
@@ -59,7 +64,7 @@ function agregarValorAlObjeto(nombrePropiedad, valor){
 
 agregarValorAlObjeto("saludo", "Que tal")
 console.log(objeto)
-agregarValor("nombre","Saul")
+agregarValorAlObjeto("nombre","Saul")
 console.log(objeto)
 
 //Object.keys nos da un arreglo con el nombre de las propiedas
@@ -72,7 +77,9 @@ for(let i=0; i<keys.length; i++){
     console.log("Propiedad: ",nombrePropiedad, "Valor:", tzuzulObjeto[nombrePropiedad])
 }
 
-keys.forEach(nombrePropiedad=>console.log("Propiedad: ",nombrePropiedad, "Valor:", tzuzulObjeto[nombrePropiedad]))
+keys.forEach(function(nombrePropiedad){
+    console.log("Propiedad: ",nombrePropiedad, "Valor:", tzuzulObjeto[nombrePropiedad])
+})
 
 for(let nombrePropiedad in tzuzulObjeto){
     console.log("Propiedad: ",nombrePropiedad, "Valor:", tzuzulObjeto[nombrePropiedad])
@@ -88,3 +95,19 @@ let [nombre, edad, tercerPos] = tzuzul
 console.log(nombre)
 console.log(edad)
 console.log(tercerPos)
+
+
+let infoLibros = []
+
+//Funcion constructora
+const agregarLibro = (titulo, autor)=>{
+    const libro = {
+        autor: autor,
+        titulo: titulo
+    }
+    infoLibros.push(libro)
+    console.log(infoLibros)
+}
+
+agregarLibro("El QUijote", "Cervantes")
+agregarLibro("Odisea", "Homero")
