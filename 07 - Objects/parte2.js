@@ -131,10 +131,13 @@ function imprimirDatosAnimal(animal){
     console.log(animal.ojos)
     console.log(animal.nombre)
     console.log("Y este animal hace:")
-    animal.hacerSonido()
+    if(animal.hacerSonido){
+        animal.hacerSonido()
+    }
 }
 
 let michi = new Gato("blanco",2,"verdes","Michi", "Romano")
 
 imprimirDatosAnimal(untete)
 imprimirDatosAnimal(michi)
+imprimirDatosAnimal(tzuzul)
