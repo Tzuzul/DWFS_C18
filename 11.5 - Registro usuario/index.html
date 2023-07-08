@@ -1,0 +1,35 @@
+<!-- Validacion de formulario -->
+<!-- Las validaciones se hacen en dos fases -->
+<!-- Validacion en el front end -->
+<!-- Validacion en el back end -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            background-color: rgb(246, 131, 131);
+        }
+        .success{
+            background-color: rgb(180, 249, 180);
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <form id="formulario">
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <input type="password" name="password">
+
+        <button>Enviar</button>
+    </form>
+
+    <section id="errors"></section>
+
+    <script src="./index.js"></script>
+</body>
+</html>
