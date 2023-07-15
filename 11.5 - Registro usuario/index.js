@@ -1,6 +1,6 @@
 const formulario = document.getElementById('formulario')
 const errors = document.getElementById('errors')
-const validEmail = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)
+
 
 
 formulario.onsubmit = (event)=>{
