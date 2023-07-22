@@ -25,7 +25,7 @@ export default function Conteo() {
     }
 
     const lanzarAlerta = ()=>{
-        alert('Efecto secundario!')
+        console.log('Efecto secundario!')
     }
   return (
     <div>
@@ -37,7 +37,7 @@ export default function Conteo() {
         <button onClick={agregarNumero}>Agregar numero actual</button>
 
         <div>
-            {numeros.map(numero=><p>{numero}</p>)}
+            {numeros.map((numero, indice)=><p key={indice}>{numero}</p>)}
             {/* {[<p>{1}</p>,<p>{2}</p>,<p>{3}</p>]} */}
         </div>
     </div>
