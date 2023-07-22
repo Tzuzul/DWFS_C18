@@ -11,7 +11,7 @@ function saludar(nombre, cb){
     }
 }
 
-saludar("Tzuzul", (error, resultado)=>{
+saludar("", (error, resultado)=>{
     console.log(error)
     console.log(resultado)
 })
