@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Conteo() {
     //const contador = useState(10)
@@ -29,6 +30,10 @@ export default function Conteo() {
     }
   return (
     <div>
+        <section>
+            <Link to='/login'>Login</Link>
+            <Link to='/counter'>Counter</Link>
+        </section>
         <p>{contador}</p>
         {console.log('Se hizo render')}
         <button onClick={incrementar}>Incrementar</button>
