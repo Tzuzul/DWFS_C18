@@ -2,7 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import MiComponente from '../components/MiComponente'
 
+// stateful/functional component
 export default function Pokemon() {
     const [pokemon, setPokemon] = useState([])
     // Evitar un ciclo infinito
@@ -23,6 +25,8 @@ export default function Pokemon() {
         {pokemon.map(poke=><article>
             <Link to={'/pokemon/'+poke.name}><h3>{poke.name}</h3></Link>
         </article>)}
+
+        <MiComponente></MiComponente>
     </>
   )
 }

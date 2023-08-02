@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Conteo() {
     //const contador = useState(10)
@@ -25,10 +26,14 @@ export default function Conteo() {
     }
 
     const lanzarAlerta = ()=>{
-        alert('Efecto secundario!')
+        console.log('Efecto secundario!')
     }
   return (
     <div>
+        <section>
+            <Link to='/login'>Login</Link>
+            <Link to='/counter'>Counter</Link>
+        </section>
         <p>{contador}</p>
         {console.log('Se hizo render')}
         <button onClick={incrementar}>Incrementar</button>
@@ -37,7 +42,7 @@ export default function Conteo() {
         <button onClick={agregarNumero}>Agregar numero actual</button>
 
         <div>
-            {numeros.map(numero=><p>{numero}</p>)}
+            {numeros.map((numero, indice)=><p key={indice}>{numero}</p>)}
             {/* {[<p>{1}</p>,<p>{2}</p>,<p>{3}</p>]} */}
         </div>
     </div>
