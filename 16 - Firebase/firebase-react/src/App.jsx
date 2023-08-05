@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import AddMovie from './pages/AddMovie'
 import Movies from './pages/Movies'
+import UpdateMovie from './pages/UpdateMovie'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/movies' element={<Movies/>}></Route>
         <Route path='/movies/add' element={<AddMovie/>}></Route>
+        <Route path='/movies/update/:id' element={<UpdateMovie/>}></Route>
       </Routes>
     </>
   )
