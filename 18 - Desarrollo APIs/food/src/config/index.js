@@ -11,7 +11,8 @@ require('dotenv').config()
 
 const config = {
     port: process.env.PORT,
-    dbPassword: process.env.DB_PASSWORD
+    dbPassword: process.env.DB_PASSWORD,
+    dbUsername: process.env.DB_USERNAME,
 }
 
 module.exports = config
