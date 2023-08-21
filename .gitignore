@@ -1,1 +1,3 @@
 00 - assets
+node_modules
+.env
