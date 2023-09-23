@@ -1,0 +1,33 @@
+import React, {createContext, useEffect, useState} from 'react'
+import instance from '../api'
+
+export const UserContext = createContext() // HighOrder Component
+
+export default function UserProvider({children}) {
+    const [user, setUser] = useState({
+        logged: false,
+        data:{}
+    })
+
+    useEffect(()=>{
+        instance.get('/api/auth/recover',{
+            headers:{
+                Authorization: 'Bearer '+ localStorage.getItem('token')
+            }
+        })
+        .then((response)=>{
+            setUser({
+                logged:true,
+                data: response.data.data
+            })
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }, [])
+
+  return (
+    <UserContext.Provider value={{user, setUser}}>
+        {children}
+    </UserContext.Provider>
+  )
+}
