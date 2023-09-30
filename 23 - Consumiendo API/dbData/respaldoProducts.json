@@ -1,0 +1,4 @@
+{"_id":{"$oid":"64fcc0aebf72ced8e825b1c3"},"name":"Television","price":123.45,"details":"Television de la marca ...","__v":0}
+{"_id":{"$oid":"64fcc370bf72ced8e825b1c8"},"name":"television","price":1000,"details":"50  pulgadas","__v":0}
+{"_id":{"$oid":"64fcc387bf72ced8e825b1ca"},"name":"television","price":1000,"details":"50  pulgadas","__v":0}
+{"_id":{"$oid":"650f0adafd1b4c51cb7149ba"},"name":"Television","price":123.45,"details":"Television de la marca ...","__v":0}
