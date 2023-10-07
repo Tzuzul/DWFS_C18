@@ -12,20 +12,22 @@ export default function Checkout() {
       <div>
           <h1>Checkout</h1>
           <p>Total: $1000</p>
-          <PayPalButtons onApprove={(data)=>{
-            console.log(data)
-            return navigate('/cart/complete')
-          }} 
-          createOrder={()=>{
-            return instance.post('/api/payments/create',{
-              total: 100
-            }).then((response)=>{
-              return response.data.orderID
-            })
-          }}
-          style={{
-            color: "black"
-          }}/>
+          <PayPalButtons 
+            onApprove={(data)=>{
+              console.log(data)
+              return navigate('/cart/complete')
+            }} 
+            createOrder={()=>{
+              return instance.post('/api/payments/create',{
+                total: 100
+              }).then((response)=>{
+                return response.data.orderID
+              })
+            }}
+            style={{
+              color: "black"
+            }}
+          />
       </div>
     </PayPalScriptProvider>
   )

@@ -6,7 +6,8 @@ export const UserContext = createContext() // HighOrder Component
 export default function UserProvider({children}) {
     const [user, setUser] = useState({
         logged: false,
-        data:{}
+        data:{},
+        fetching: true
     })
 
     useEffect(()=>{
@@ -18,10 +19,16 @@ export default function UserProvider({children}) {
         .then((response)=>{
             setUser({
                 logged:true,
-                data: response.data.data
+                data: response.data.data,
+                fetching: false
             })
         }).catch((error)=>{
             console.log(error)
+            setUser({
+                logged:false,
+                data: {},
+                fetching: false
+            })
         })
     }, [])
 

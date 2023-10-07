@@ -6,16 +6,27 @@ import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
 import Checkout from './pages/Checkout'
 import PaymentCompleted from './pages/PaymentCompleted'
+import PublicOnlyRoute from './components/PublicOnlyRoute'
+import PrivateRoute from './components/PrivateRoute'
+import AddProduct from './pages/AddProduct'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
   return (
     <>
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/cart/checkout' element={<Checkout/>} />
+        <Route path='/cart/checkout' element={<PrivateRoute children={<Checkout/>}/>} />
         <Route path='/cart/complete' element={<PaymentCompleted/>} />
-        <Route path='/auth/login' element={<Login/>} />
-        <Route path='/auth/signup' element={<SignUp/>} />
+        <Route path='/auth/login' element={<PublicOnlyRoute>
+          <Login/>
+        </PublicOnlyRoute>} />
+        <Route path='/auth/signup' element={<PublicOnlyRoute>
+          <SignUp/>
+        </PublicOnlyRoute>} />
+        <Route path='/admin/products/add' element={<ProtectedRoute allowedRoles={['ADMIN','EDITOR']}>
+          <AddProduct/>
+        </ProtectedRoute>} />
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </>
