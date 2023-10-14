@@ -33,7 +33,7 @@ userSchema.methods.hashPassword = function(password){
     // this.password = crypto.pbkdf2Sync(password, salt, 10000, 512, 'sha512').toString('hex')
     // const hashing = bcrypt.hashSync(password, 10000)
     // console.log(hashing)
-    this.password = bcrypt.hashSync(password, 100)
+    this.password = bcrypt.hashSync(password, 10000)
 }
 
 // userSchema.methods.generateJWT = function(){

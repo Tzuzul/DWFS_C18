@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* h1:hover{
+    font-size: 36px;
+    font-weight: bold;
+    color: pink
+} */
