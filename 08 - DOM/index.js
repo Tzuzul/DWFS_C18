@@ -1,3 +1,5 @@
+console.log(document);
+
 // Obtenemos una variable que almacena un objeto de parrafo (p) con el id "name"
 const parrafoNombre = document.getElementById("name")
 
@@ -69,5 +71,5 @@ localStorage.setItem("nombre","Tzuzul")
 // localStorage.removeItem("nombre")
 
 console.log(localStorage.getItem("nombre"))
-
+clg
 localStorage.clear()
